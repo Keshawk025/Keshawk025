@@ -7,9 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=Keshawk025&icon=0&color=0" alt="Profile Views">
-  </a>
+  <img src="https://komarev.com/ghpvc/?username=Keshawk025&style=flat-square&color=3670A0" alt="Profile Views" />
 </p>
 
 ---
@@ -58,12 +56,12 @@
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Keshawk025&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true" width="48%" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Keshawk025&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=true&layout=compact" width="48%" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Keshawk025&show_icons=true&theme=tokyonight&hide_border=true" width="48%" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Keshawk025&layout=compact&theme=tokyonight&hide_border=true" width="48%" alt="Top Languages" />
 </div>
 <br>
 <div align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Keshawk025&theme=tokyonight&hide_border=false" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=Keshawk025&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 
 ---
@@ -83,7 +81,3 @@
 </div>
 
 ---
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote">
-</div>
