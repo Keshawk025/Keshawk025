@@ -85,6 +85,18 @@ I use projects and hackathons as a way to learn by shipping:
 
 ---
 
+## 🧩 LeetCode Journey
+
+<div align="center">
+  <a href="https://leetcode.com/u/keshawk025/">
+    <img src="https://github-readme-leetcode-stats.vercel.app/api/card?username=keshawk025&sections=profile,solved,streak,heatmap&theme=dark&hide_border=true" alt="LeetCode stats, streak and activity" />
+  </a>
+</div>
+
+> 🔥 Tracking solved problems, streaks, skills, and submission activity from my LeetCode profile.
+
+---
+
 ## 📊 GitHub Command Center
 
 <div align="center">
