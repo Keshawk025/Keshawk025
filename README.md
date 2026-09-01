@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="./assets/confetti.svg" width="100%" alt="Animated confetti welcome">
-
 # Keshaw K
 
 ### AI/ML Developer · Backend Engineer · Systems Builder
