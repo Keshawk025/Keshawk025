@@ -124,6 +124,7 @@ jobs:
           green2 = "#006d32"
           green3 = "#26a641"
           green4 = "#39d353"
+          FONT = "'JetBrains Mono','Courier New',monospace"
 
           def svg_wrap(width, height, body):
               return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
@@ -133,19 +134,19 @@ jobs:
 
           stats_body = f'''
           <rect x="1" y="1" width="494" height="188" rx="12" fill="{panel}" stroke="{border}"/>
-          <text x="24" y="38" fill="{blue}" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">GitHub Stats</text>
-          <text x="24" y="72" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">{total_contributions}</text>
-          <text x="24" y="94" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Contributions</text>
-          <text x="190" y="72" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">{len(repos)}</text>
-          <text x="190" y="94" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Repositories</text>
-          <text x="350" y="72" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700">{user.get('followers',0)}</text>
-          <text x="350" y="94" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Followers</text>
+          <text x="24" y="38" fill="{blue}" font-family="{FONT}" font-size="18" font-weight="700">GitHub Stats</text>
+          <text x="24" y="72" fill="{text}" font-family="{FONT}" font-size="28" font-weight="700">{total_contributions}</text>
+          <text x="24" y="94" fill="{muted}" font-family="{FONT}" font-size="11">Contributions</text>
+          <text x="190" y="72" fill="{text}" font-family="{FONT}" font-size="28" font-weight="700">{len(repos)}</text>
+          <text x="190" y="94" fill="{muted}" font-family="{FONT}" font-size="11">Repositories</text>
+          <text x="350" y="72" fill="{text}" font-family="{FONT}" font-size="28" font-weight="700">{user.get('followers',0)}</text>
+          <text x="350" y="94" fill="{muted}" font-family="{FONT}" font-size="11">Followers</text>
           <line x1="24" y1="115" x2="470" y2="115" stroke="{border}"/>
-          <text x="24" y="145" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Stars received</text>
-          <text x="130" y="145" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600">{total_stars}</text>
-          <text x="210" y="145" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Forks</text>
-          <text x="258" y="145" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600">{total_forks}</text>
-          <text x="24" y="170" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Public repositories · {escape(user.get('name') or USER)}</text>
+          <text x="24" y="145" fill="{muted}" font-family="{FONT}" font-size="11">Stars received</text>
+          <text x="130" y="145" fill="{text}" font-family="{FONT}" font-size="13" font-weight="600">{total_stars}</text>
+          <text x="210" y="145" fill="{muted}" font-family="{FONT}" font-size="11">Forks</text>
+          <text x="258" y="145" fill="{text}" font-family="{FONT}" font-size="13" font-weight="600">{total_forks}</text>
+          <text x="24" y="170" fill="{muted}" font-family="{FONT}" font-size="11">Public repositories · {escape(user.get('name') or USER)}</text>
           '''
           open(f"{OUT}/stats.svg", "w", encoding="utf-8").write(svg_wrap(496, 190, stats_body))
 
@@ -166,10 +167,10 @@ jobs:
               lx = 24 + col * 225
               ly = 105 + row * 25
               pct = n / total_lang * 100
-              legend.append(f'<circle cx="{lx}" cy="{ly-4}" r="5" fill="{lang_colors[i % len(lang_colors)]}"/><text x="{lx+12}" y="{ly}" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="12">{escape(lang)} {pct:.1f}%</text>')
+              legend.append(f'<circle cx="{lx}" cy="{ly-4}" r="5" fill="{lang_colors[i % len(lang_colors)]}"/><text x="{lx+12}" y="{ly}" fill="{text}" font-family="{FONT}" font-size="11">{escape(lang)} {pct:.1f}%</text>')
           langs_body = f'''
           <rect x="1" y="1" width="494" height="188" rx="12" fill="{panel}" stroke="{border}"/>
-          <text x="24" y="38" fill="{blue}" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Top Languages</text>
+          <text x="24" y="38" fill="{blue}" font-family="{FONT}" font-size="18" font-weight="700">Top Languages</text>
           {''.join(segments)}
           {''.join(legend)}
           '''
@@ -177,22 +178,22 @@ jobs:
 
           streak_body = f'''
           <rect x="1" y="1" width="494" height="188" rx="12" fill="{panel}" stroke="{border}"/>
-          <text x="24" y="38" fill="{blue}" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Contribution Streak</text>
-          <text x="34" y="98" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="42" font-weight="700">{current_streak}</text>
-          <text x="34" y="121" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Current streak</text>
-          <text x="194" y="98" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="42" font-weight="700">{longest}</text>
-          <text x="194" y="121" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Longest streak</text>
-          <text x="356" y="98" fill="{text}" font-family="Segoe UI,Arial,sans-serif" font-size="42" font-weight="700">{nonzero}</text>
-          <text x="356" y="121" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Active days / year</text>
-          <text x="24" y="160" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Based on GitHub's public contribution calendar</text>
+          <text x="24" y="38" fill="{blue}" font-family="{FONT}" font-size="18" font-weight="700">Contribution Streak</text>
+          <text x="34" y="98" fill="{text}" font-family="{FONT}" font-size="40" font-weight="700">{current_streak}</text>
+          <text x="34" y="121" fill="{muted}" font-family="{FONT}" font-size="11">Current streak</text>
+          <text x="194" y="98" fill="{text}" font-family="{FONT}" font-size="40" font-weight="700">{longest}</text>
+          <text x="194" y="121" fill="{muted}" font-family="{FONT}" font-size="11">Longest streak</text>
+          <text x="356" y="98" fill="{text}" font-family="{FONT}" font-size="40" font-weight="700">{nonzero}</text>
+          <text x="356" y="121" fill="{muted}" font-family="{FONT}" font-size="11">Active days / year</text>
+          <text x="24" y="160" fill="{muted}" font-family="{FONT}" font-size="11">Based on GitHub's public contribution calendar</text>
           '''
           open(f"{OUT}/streak.svg", "w", encoding="utf-8").write(svg_wrap(496, 190, streak_body))
 
           # Larger, easier-to-read contribution heatmap.
           heat_body = f'''
           <rect x="1" y="1" width="988" height="250" rx="12" fill="{panel}" stroke="{border}"/>
-          <text x="24" y="36" fill="{blue}" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Contribution Activity</text>
-          <text x="24" y="56" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="12">Last 365 days</text>
+          <text x="24" y="36" fill="{blue}" font-family="{FONT}" font-size="18" font-weight="700">Contribution Activity</text>
+          <text x="24" y="56" fill="{muted}" font-family="{FONT}" font-size="11">Last 365 days</text>
           '''
           grid = recent[-364:]
           start_x, start_y = 28, 78
@@ -202,9 +203,9 @@ jobs:
               row = i % 7
               color = [green0, green1, green2, green3, green4][min(level, 4)]
               heat_body += f'<rect x="{start_x + col*(cell+gap)}" y="{start_y + row*(cell+gap)}" width="{cell}" height="{cell}" rx="3" fill="{color}"/>'
-          heat_body += f'<text x="28" y="215" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="11">Less</text>'
+          heat_body += f'<text x="28" y="215" fill="{muted}" font-family="{FONT}" font-size="10">Less</text>'
           for j, c in enumerate([green0, green1, green2, green3, green4]):
-              heat_body += f'<rect x="64" y="207" width="15" height="15" rx="3" fill="{c}"/><text x="{84}" y="219" fill="{muted}" font-family="Segoe UI,Arial,sans-serif" font-size="10">More</text>' if j == 4 else f'<rect x="{64+j*20}" y="207" width="15" height="15" rx="3" fill="{c}"/>'
+              heat_body += f'<rect x="64" y="207" width="15" height="15" rx="3" fill="{c}"/><text x="{84}" y="219" fill="{muted}" font-family="{FONT}" font-size="9">More</text>' if j == 4 else f'<rect x="{64+j*20}" y="207" width="15" height="15" rx="3" fill="{c}"/>'
           open(f"{OUT}/activity.svg", "w", encoding="utf-8").write(svg_wrap(990, 250, heat_body))
           PY
 
