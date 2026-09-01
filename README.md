@@ -75,7 +75,7 @@ I use projects and hackathons as a way to learn by shipping:
 ### AI / ML
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![Scikit--learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 
 ### Backend / Web
@@ -121,7 +121,7 @@ I use projects and hackathons as a way to learn by shipping:
 ## 🔥 GitHub Activity
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Keshawk025&theme=tokyo-night&hide_border=true" alt="GitHub contribution activity graph" />
+  <img src="./profile/activity.svg" alt="GitHub contribution activity" />
 </div>
 
 ---
